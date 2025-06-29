@@ -10,8 +10,8 @@ public class ProductController : Controller
 
     public ProductController(IMongoClient client)
     {
-        var database = client.GetDatabase("ProductDb");
-        _products = database.GetCollection<Product>("Products");
+        var database = client.GetDatabase("appdb");
+        _products = database.GetCollection<Product>("items");
     }
 
     [HttpGet]
